@@ -26,7 +26,8 @@ module DocuSeal
     config.active_storage.draw_routes = ENV['MULTITENANT'] != 'true'
 
     config.i18n.available_locales = %i[en en-US en-GB es-ES fr-FR pt-PT de-DE it-IT
-                                       es it de fr pl uk cs pt he nl ar ko ja]
+                                       es it de fr pl uk cs pt he nl ar ko ja vi]
+    config.i18n.default_locale = :vi
     config.i18n.fallbacks = [:en]
 
     config.exceptions_app = ->(env) { ErrorsController.action(:show).call(env) }

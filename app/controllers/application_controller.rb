@@ -75,7 +75,7 @@ class ApplicationController < ActionController::Base
   end
 
   def with_browser_locale(&)
-    return yield if I18n.locale != :'en-US' && I18n.locale != :en
+    return yield if I18n.locale != :'en-US' && I18n.locale != :en && I18n.locale != I18n.default_locale
 
     locale   = params[:lang].presence
     locale ||= request.env['HTTP_ACCEPT_LANGUAGE'].to_s[BROWSER_LOCALE_REGEXP].to_s
@@ -84,10 +84,10 @@ class ApplicationController < ActionController::Base
       if locale.starts_with?('en-') && locale != 'en-US'
         'en-GB'
       else
-        locale.split('-').first.presence || 'en-GB'
+        locale.split('-').first.presence || I18n.default_locale.to_s
       end
 
-    locale = 'en-GB' unless I18n.locale_available?(locale)
+    locale = I18n.default_locale.to_s unless I18n.locale_available?(locale)
 
     I18n.with_locale(locale, &)
   end

@@ -52,7 +52,7 @@ class Account < ApplicationRecord
                                          inverse_of: :account, class_name: 'User'
 
   attribute :timezone, :string, default: 'UTC'
-  attribute :locale, :string, default: 'en-US'
+  attribute :locale, :string, default: 'vi'
 
   scope :active, -> { where(archived_at: nil) }
 
