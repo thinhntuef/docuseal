@@ -19,6 +19,7 @@ en: &en
   language_ar: العربية
   language_ko: 한국어
   language_ja: 日本語
+  language_vi: Tiếng Việt
   hi_there: Hi there
   pro: Pro
   thanks: Thanks
@@ -914,6 +915,926 @@ en: &en
     events:
       range_with_total: "%{from}-%{to} of %{count} events"
       range_without_total: "%{from}-%{to} events"
+
+vi:
+  language_en: English
+  language_en-US: English (US)
+  language_en-GB: English (UK)
+  language_es-ES: Español
+  language_fr-FR: Français
+  language_pt-PT: Português
+  language_de-DE: Deutsch
+  language_es: Español
+  language_it: Italiano
+  language_de: Deutsch
+  language_fr: Français
+  language_pl: Polski
+  language_uk: Українська
+  language_cs: Čeština
+  language_pt: Português
+  language_he: עברית
+  language_nl: Nederlands
+  language_ar: العربية
+  language_ko: 한국어
+  language_ja: 日本語
+  language_vi: Tiếng Việt
+  hi_there: Xin chào
+  pro: Pro
+  thanks: Cảm ơn
+  private: Riêng tư
+  select: Chọn
+  enabled: Đã bật
+  disabled: Đã tắt
+  party: Bên
+  click_here_to_send_a_reset_password_email_html: '<label class="link" for="resend_password_button">Nhấn vào đây</label> để gửi email đặt lại mật khẩu.'
+  edit_order: Sửa thứ tự
+  expirable_file_download_links: Liên kết tải tệp có thời hạn
+  invite_form_fields: Mời điền các trường biểu mẫu
+  default_parties: Các bên mặc định
+  authenticate_embedded_form_preview_with_token: Xác thực bản xem trước biểu mẫu nhúng bằng token
+  stripe_integration: Tích hợp Stripe
+  require_all_recipients: Yêu cầu tất cả người nhận
+  stripe_account_has_been_connected: Đã kết nối tài khoản Stripe.
+  re_connect_stripe: Kết nối lại Stripe
+  bcc_recipients: Người nhận BCC
+  resend_pending: Gửi lại các mục đang chờ
+  always_enforce_signing_order: Luôn áp dụng thứ tự ký
+  create_templates_with_private_access_by_default: Tạo mẫu với quyền truy cập riêng tư theo mặc định
+  ensure_unique_recipients: Đảm bảo người nhận không trùng lặp
+  edit_per_party: Chỉnh sửa theo từng bên
+  reply_to: Trả lời đến
+  pending_by_me: Đang chờ tôi xử lý
+  partially_completed: Hoàn thành một phần
+  require_phone_2fa_to_open: Yêu cầu xác thực 2 lớp qua điện thoại để mở
+  the_sender_has_requested_a_two_factor_authentication_via_one_time_password_sent_to_your_html: Người gửi đã yêu cầu xác thực hai lớp qua mật khẩu một lần được gửi đến số điện thoại <b>%{phone}</b> của bạn.
+  send_verification_code: Gửi mã xác minh
+  code_has_been_resent: Mã đã được gửi lại
+  invalid_code: Mã không hợp lệ
+  signed: Đã ký
+  first_party: 'Bên thứ nhất'
+  remove_filter: Xóa bộ lọc
+  add: Thêm
+  adding: Đang thêm
+  owner: Chủ sở hữu
+  select_user: Chọn người dùng
+  team_member_permissions: Quyền của thành viên nhóm
+  entire_team: Toàn bộ nhóm
+  admin_only: Chỉ quản trị viên
+  accessiable_by: Có thể truy cập bởi
+  team_access: Quyền truy cập nhóm
+  document_download_filename_format: Định dạng tên tệp khi tải tài liệu
+  docuseal_trusted_signature: Chữ ký tin cậy e-Office
+  hello_name: Xin chào %{name}
+  you_are_invited_to_product_name: Bạn được mời tham gia %{product_name}
+  you_have_been_invited_to_account_name_product_name_please_sign_up_using_the_link_below_: 'Bạn đã được mời tham gia %{account_name} %{product_name}. Vui lòng đăng ký bằng liên kết bên dưới:'
+  sent_using_product_name_in_testing_mode_html: 'Được gửi bằng <a href="%{product_url}">%{product_name}</a> ở chế độ thử nghiệm'
+  sent_using_product_name_free_document_signing_html: 'Được gửi bằng dịch vụ ký tài liệu miễn phí của <a href="%{product_url}">%{product_name}</a>.'
+  sent_with_docuseal_pro_html: 'Được gửi bằng <a href="%{product_url}">e-Office Pro</a>'
+  show_send_with_docuseal_pro_attribution_in_emails_html: Hiển thị dòng "Được gửi bằng <span class="link">e-Office Pro</span>" trong email
+  sign_documents_with_trusted_certificate_provided_by_docu_seal_your_documents_and_data_are_never_shared_with_docu_seal_p_d_f_checksum_is_provided_to_generate_a_trusted_signature: Ký tài liệu bằng chứng chỉ tin cậy do e-Office cung cấp. Tài liệu và dữ liệu của bạn không bao giờ được chia sẻ với e-Office. Mã kiểm tra (checksum) PDF được cung cấp để tạo chữ ký tin cậy.
+  you_have_been_invited_to_submit_the_name_form: 'Bạn đã được mời điền biểu mẫu "%{name}".'
+  you_have_been_invited_to_sign_the_name: 'Bạn đã được mời ký "%{name}".'
+  alternatively_you_can_review_and_download_your_copy_using_the_link_below: "Ngoài ra, bạn có thể xem lại và tải bản sao của mình bằng liên kết bên dưới:"
+  please_check_the_copy_of_your_name_in_the_email_attachments: 'Vui lòng kiểm tra bản sao "%{name}" của bạn trong tệp đính kèm email.'
+  awaiting_completion_by_the_other_party: "Đang chờ bên còn lại hoàn tất"
+  review_and_sign: Xem lại và Ký
+  review_and_submit: Xem lại và Gửi
+  please_contact_us_by_replying_to_this_email_if_you_have_any_questions: "Vui lòng liên hệ với chúng tôi bằng cách trả lời email này nếu bạn có bất kỳ câu hỏi nào."
+  submitter_invitation_sms_body_sign: '{account.name} đã mời bạn ký một tài liệu: {submitter.link}'
+  verification_code_sms_body: 'Mã xác minh: {code}'
+  you_are_invited_to_submit_a_form: 'Bạn được mời điền một biểu mẫu'
+  you_are_invited_to_sign_a_document: 'Bạn được mời ký một tài liệu'
+  you_are_invited_to_sign_documents: 'Bạn được mời ký các tài liệu'
+  your_document_copy: 'Bản sao tài liệu của bạn'
+  name_has_been_completed_by_submitters: '"%{name}" đã được hoàn tất bởi %{submitters}.'
+  template_name_has_been_completed_by_submitters: '{template.name} đã được hoàn tất bởi {submission.submitters}'
+  submitter_invitation_email_sign_body: |
+    Xin chào,
+
+    Bạn đã được mời ký "{template.name}".
+
+    [Xem lại và Ký]({submitter.link})
+
+    Vui lòng liên hệ với chúng tôi bằng cách trả lời email này nếu bạn có bất kỳ câu hỏi nào.
+
+    Cảm ơn,
+    {account.name}
+  submitter_completed_email_body: |
+    Xin chào,
+
+    "{template.name}" đã được hoàn tất bởi {submission.submitters}
+
+    {submission.link}
+  submitter_documents_copy_email_body: |
+    Xin chào,
+
+    Vui lòng kiểm tra bản sao "{template.name}" của bạn trong tệp đính kèm email.
+    Ngoài ra, bạn có thể xem lại và tải bản sao của mình bằng liên kết bên dưới:
+
+    [{template.name}]({documents.link})
+
+    Cảm ơn,
+    {account.name}
+  view: Xem
+  email: Email
+  form_expired_at_html: 'Biểu mẫu đã hết hạn vào <span class="font-semibold">%{time}</span>'
+  verification_code_code: 'Mã xác minh: %{code}'
+  digitally_signed_by: Được ký số bởi
+  role: Vai trò
+  reason: Lý do
+  provide_your_email_to_start: Nhập email của bạn để bắt đầu
+  provide_your_email: Nhập email của bạn
+  provide_your_name_to_start: Nhập tên của bạn để bắt đầu
+  provide_your_name: Nhập tên của bạn
+  provide_your_phone_in_international_format_to_start: Nhập số điện thoại của bạn theo định dạng quốc tế để bắt đầu
+  provide_your_phone_in_international_format: Nhập số điện thoại của bạn theo định dạng quốc tế
+  start: Bắt đầu
+  enforce_recipients_order: Áp dụng thứ tự người nhận
+  starting: Đang bắt đầu
+  invited_by_html: 'Được mời bởi <span class="font-semibold">%{name}</span>'
+  you_have_been_invited_to_submit_a_form: Bạn đã được mời điền một biểu mẫu
+  signed_on_time: 'Đã ký vào %{time}'
+  completed_on_time: 'Hoàn tất vào %{time}'
+  document_has_been_signed_already: Tài liệu đã được ký
+  form_has_been_submitted_already: Biểu mẫu đã được gửi
+  send_copy_to_email: Gửi bản sao đến Email
+  sending: Đang gửi
+  resubmit: Gửi lại
+  form_has_been_deleted_by_html: 'Biểu mẫu đã bị xóa bởi <span class="font-semibold">%{name}</span>.'
+  or: hoặc
+  download_documents: Tải tài liệu
+  downloading: Đang tải
+  download: Tải xuống
+  decline: Từ chối
+  declined: Đã từ chối
+  decline_reason: Lý do từ chối
+  provide_a_reason: Nhập lý do
+  notify_the_sender_with_the_reason_you_declined: Thông báo cho người gửi lý do bạn từ chối
+  form_has_been_declined_on_html: 'Biểu mẫu đã bị từ chối vào <span class="font-semibold">%{time}</span>'
+  name_declined_by_submitter: '"%{name}" bị từ chối bởi %{submitter}'
+  name_declined_by_submitter_with_the_following_reason: '"%{name}" đã bị từ chối bởi %{submitter} với lý do sau:'
+  completed_successfully: Hoàn tất thành công
+  password: Mật khẩu
+  sign_in: Đăng nhập
+  signing_in: Đang đăng nhập
+  sign_in_with_microsoft: Đăng nhập bằng Microsoft
+  sign_in_with_google: Đăng nhập bằng Google
+  forgot_your_password_: Quên mật khẩu?
+  create_free_account: Tạo tài khoản miễn phí
+  already_have_an_account: Đã có tài khoản?
+  first_name: Tên
+  last_name: Họ
+  sign_up: Đăng ký
+  signing_up: Đang đăng ký
+  profile_details: Thông tin hồ sơ
+  sign_up_with_google: Đăng ký bằng Google
+  sign_up_with_microsoft: Đăng ký bằng Microsoft
+  by_creating_an_account_you_agree_to_our_html: 'Bằng việc tạo tài khoản, bạn đồng ý với <a target="_blank" href="https://www.docuseal.com/privacy">Chính sách bảo mật</a> và <a target="_blank" href="https://www.docuseal.com/terms">Điều khoản dịch vụ</a> của chúng tôi.'
+  enter_email_to_continue: Nhập email để tiếp tục
+  account: Tài khoản
+  preferences: Tùy chọn
+  company_name: Tên công ty
+  time_zone: Múi giờ
+  language: Ngôn ngữ
+  app_url: URL ứng dụng
+  update: Cập nhật
+  updating: Đang cập nhật
+  force_2fa_with_authenticator_app: Bắt buộc xác thực 2 lớp bằng ứng dụng Authenticator
+  add_signature_id_to_the_documents: Thêm mã chữ ký vào tài liệu
+  require_signing_reason: Yêu cầu lý do ký
+  allow_typed_text_signatures: Cho phép chữ ký dạng văn bản nhập
+  allow_to_resubmit_completed_forms: Cho phép gửi lại các biểu mẫu đã hoàn tất
+  allow_to_decline_documents: Cho phép từ chối tài liệu
+  remember_and_pre_fill_signatures: Ghi nhớ và điền sẵn chữ ký
+  require_authentication_for_file_download_links: Yêu cầu xác thực cho liên kết tải tệp
+  combine_completed_documents_and_audit_log: Gộp tài liệu đã hoàn tất và Nhật ký kiểm toán
+  salesforce_integration: Tích hợp Salesforce
+  salesforce_has_been_connected: Đã kết nối Salesforce.
+  connect_salesforce_account_to_integrate_with_docuseal: Kết nối tài khoản Salesforce để tích hợp với e-Office
+  re_connect_salesforce: Kết nối lại Salesforce
+  connect_salesforce: Kết nối Salesforce
+  danger_zone: Vùng nguy hiểm
+  delete_my_account: Xóa tài khoản của tôi
+  you_are_scheduling_your_account_for_deletion_after_deletion_your_data_will_be_permanently_removed_and_cannot_be_recovered_click_ok_if_you_would_like_to_continue: "Bạn đang lên lịch xóa tài khoản của mình. Sau khi xóa, dữ liệu của bạn sẽ bị xóa vĩnh viễn và không thể khôi phục.\n\nNhấn OK nếu bạn muốn tiếp tục."
+  account_information_has_been_updated: Thông tin tài khoản đã được cập nhật.
+  should_be_a_valid_url: phải là một URL hợp lệ
+  your_account_removal_request_will_be_processed_within_2_months_please_contact_us_if_you_want_to_keep_your_account: Yêu cầu xóa tài khoản của bạn sẽ được xử lý trong vòng 2 tháng. Vui lòng liên hệ với chúng tôi nếu bạn muốn giữ lại tài khoản.
+  test_mode: Chế độ thử nghiệm
+  copy: Sao chép
+  copied: Đã sao chép
+  rotate: Xoay
+  remove_existing_api_token_and_generated_a_new_one_are_you_sure_: Xóa API token hiện tại và tạo token mới. Bạn có chắc không?
+  request_signature_multiple_submitters_with_default_values: Yêu cầu chữ ký, nhiều người ký với giá trị mặc định
+  request_signature_single_submitter: Yêu cầu chữ ký, một người ký
+  template_details: Chi tiết mẫu
+  open_full_api_reference: Mở Tài liệu API đầy đủ
+  api_token_has_been_updated: API token đã được cập nhật.
+  change_your_password: Đổi mật khẩu của bạn
+  new_password: Mật khẩu mới
+  minimum_password_length_characters_minimum: 'tối thiểu %{minimum_password_length} ký tự'
+  confirm_new_password: Xác nhận mật khẩu mới
+  change_my_password: Đổi mật khẩu của tôi
+  changing_password: Đang đổi mật khẩu
+  reset_password: Đặt lại mật khẩu
+  resetting_password: Đang đặt lại mật khẩu
+  sign_in_with_name_account: 'Đăng nhập bằng tài khoản %{name}'
+  two_factor_code_from_authenticator_app: Mã xác thực hai lớp từ ứng dụng Authenticator
+  sign_up_in_docuseal_console_to_upgrade_on_premises_app_is_completely_standalone_console_is_used_only_to_manage_your_license: Đăng ký trong e-Office Console để nâng cấp. Ứng dụng cài đặt tại chỗ hoàn toàn độc lập, Console chỉ dùng để quản lý giấy phép của bạn.
+  send_from_email: Gửi từ Email
+  optional: tùy chọn
+  save: Lưu
+  saving: Đang lưu
+  changes_have_been_saved: Các thay đổi đã được lưu.
+  unlock_with_docuseal_pro: Mở khóa với e-Office Pro
+  use_your_own_certificates_to_sign_and_verify_pdf_files: Sử dụng chứng chỉ của riêng bạn để ký và xác minh tệp PDF.
+  upload_certificate: Tải lên chứng chỉ
+  name: Tên
+  file: Tệp
+  use_a_valid_der_p12_or_pfx_file: Sử dụng tệp .der, .p12 hoặc .pfx hợp lệ.
+  submit: Gửi
+  submitting: Đang gửi
+  pdf_signature: Chữ ký PDF
+  upload_signed_pdf_file_to_validate_its_signature_: 'Tải lên tệp PDF đã ký để xác minh chữ ký:'
+  analyzing: Đang phân tích
+  verify_signed_pdf: Xác minh PDF đã ký
+  click_to_upload_or_drag_and_drop_html: '<span class="font-medium">Nhấn để tải lên</span> hoặc kéo và thả'
+  click_to_upload_or_drag_and_drop_files_html: '<span class="font-medium">Nhấn để tải lên</span> hoặc kéo và thả tệp'
+  signing_certificates: Chứng chỉ ký
+  upload_cert: Tải lên chứng chỉ
+  valid_to: Có hiệu lực đến
+  status: Trạng thái
+  make_default: Đặt làm mặc định
+  remove: Xóa
+  removing: Đang xóa
+  delete: Xóa
+  default: Mặc định
+  are_you_sure_: Bạn có chắc không?
+  timestamp_server: Máy chủ dấu thời gian
+  timeserver_url: URL máy chủ thời gian
+  url_of_the_trusted_rfc_3161_timeserver_to_be_used_to_generate_timestamp_signatures: URL của máy chủ thời gian RFC 3161 tin cậy được dùng để tạo chữ ký dấu thời gian.
+  apply_multiple_pdf_digital_signatures_in_the_document_per_each_signer: Áp dụng nhiều chữ ký số PDF trong tài liệu cho mỗi người ký
+  remove_pdf_form_fillable_fields_from_the_signed_pdf_flatten_form: Xóa các trường có thể điền khỏi PDF đã ký (làm phẳng biểu mẫu)
+  certificate_has_been_successfully_added: Chứng chỉ đã được thêm thành công.
+  default_certificate_has_been_selected: Đã chọn chứng chỉ mặc định.
+  certificate_has_been_removed: Chứng chỉ đã được xóa.
+  already_exists: đã tồn tại.
+  welcome_to_product_name: 'Chào mừng đến với %{product_name}'
+  set_password: Đặt mật khẩu
+  confirm_password: Xác nhận mật khẩu mới
+  save_password_and_sign_in: Lưu mật khẩu và Đăng nhập
+  use_an_authenticator_mobile_app_like_google_authenticator_or_1password_to_scan_the_qr_code_below: Sử dụng ứng dụng xác thực trên điện thoại như Google Authenticator hoặc 1Password để quét mã QR bên dưới.
+  remove_2fa: Gỡ xác thực 2 lớp
+  setup_2fa: Thiết lập xác thực 2 lớp
+  2fa_has_been_configured: Đã cấu hình xác thực 2 lớp.
+  code_is_invalid: Mã không hợp lệ
+  2fa_has_been_removed: Đã gỡ xác thực 2 lớp.
+  2fa_has_been_set_up_already: Xác thực 2 lớp đã được thiết lập.
+  developer_newsletters: Bản tin dành cho nhà phát triển
+  skip: Bỏ qua
+  email_notifications: Thông báo qua Email
+  receive_notification_emails_on_completed_submission: Nhận email thông báo khi hồ sơ hoàn tất
+  completed_documents_notification_bcc_address: Địa chỉ BCC thông báo tài liệu hoàn tất
+  sign_request_email_reminders: Email nhắc nhở yêu cầu ký
+  send_automatic_email_reminders_to_your_recipients: Gửi email nhắc nhở tự động đến người nhận của bạn.
+  first_reminder_in: Nhắc nhở lần đầu sau
+  second_reminder_in: Nhắc nhở lần hai sau
+  third_reminder_in: Nhắc nhở lần ba sau
+  learn_more: Tìm hiểu thêm
+  unable_to_save: Không thể lưu.
+  invalid_timeserver: Máy chủ thời gian không hợp lệ
+  email_templates: Mẫu Email
+  signature_request_email: Email yêu cầu ký
+  signature_request_sms: SMS yêu cầu ký
+  verification_code_sms: SMS mã xác minh
+  completed_notification_email: Email thông báo hoàn tất
+  company_logo: Logo công ty
+  submission_form: Biểu mẫu gửi
+  completed_form_message: Thông báo biểu mẫu hoàn tất
+  completed_form_redirect_button: Nút chuyển hướng khi hoàn tất biểu mẫu
+  documents_copy_email: Email bản sao tài liệu
+  form_custom_css: CSS tùy chỉnh biểu mẫu
+  subject: Tiêu đề
+  body: Nội dung
+  text_message: Tin nhắn văn bản
+  title: Tiêu đề
+  button_title: Tiêu đề nút
+  button_url: URL nút
+  upload_logo: Tải lên logo
+  show_confetti_on_successful_completion: Hiển thị pháo giấy khi hoàn tất thành công
+  attach_audit_log_pdf: Đính kèm PDF nhật ký kiểm toán
+  attach_documents: Đính kèm tài liệu
+  settings_have_been_saved: Cài đặt đã được lưu.
+  display_your_company_name_and_logo_when_signing_documents: Hiển thị tên và logo công ty của bạn khi ký tài liệu.
+  profile: Hồ sơ
+  signature: Chữ ký
+  update_signature: Cập nhật chữ ký
+  unable_to_save_signature: Không thể lưu chữ ký.
+  signature_has_been_saved: Chữ ký đã được lưu.
+  signature_has_been_removed: Chữ ký đã được xóa.
+  initials: Chữ ký tắt
+  update_initials: Cập nhật chữ ký tắt
+  unable_to_save_initials: Không thể lưu chữ ký tắt.
+  initials_has_been_saved: Chữ ký tắt đã được lưu.
+  initials_has_been_removed: Chữ ký tắt đã được xóa.
+  change_password: Đổi mật khẩu
+  two_factor_authentication: Xác thực hai lớp
+  2fa_is_not_configured: Chưa cấu hình xác thực 2 lớp
+  set_up_2fa: Thiết lập xác thực 2 lớp
+  contact_information_has_been_update: Thông tin liên hệ đã được cập nhật.
+  password_has_been_changed: Mật khẩu đã được thay đổi.
+  email_integration: Tích hợp Email
+  send_via_connected_email: Gửi qua email đã kết nối
+  activate_with_docuseal_pro: Kích hoạt với e-Office Pro
+  send_signature_request_to_your_recipients_directly_from_your_email: Gửi yêu cầu ký đến người nhận trực tiếp từ email của bạn
+  connect_gmail: Kết nối Gmail
+  re_connect_gmail: Kết nối lại Gmail
+  connect_microsoft: Kết nối Microsoft
+  re_connect_microsoft: Kết nối lại Microsoft
+  gmail_has_been_connected: Đã kết nối Gmail.
+  microsoft_account_has_been_connected: Đã kết nối tài khoản Microsoft.
+  but_not_activated: nhưng chưa kích hoạt
+  email_has_been_sent: Email đã được gửi.
+  email_has_been_sent_already: Email đã được gửi trước đó.
+  initial_setup: Thiết lập ban đầu
+  demo_environment: Môi trường demo
+  close: Đóng
+  upgrade: Nâng cấp
+  settings: Cài đặt
+  console: Console
+  verify_pdf: Xác minh PDF
+  sign_out: Đăng xuất
+  page_number: 'Trang %{number}'
+  powered_by: Được cung cấp bởi
+  count_documents_signed_with_html: '<b>%{count}</b> tài liệu đã ký với'
+  storage: Lưu trữ
+  notifications: Thông báo
+  e_signature: Chữ ký điện tử
+  personalization: Cá nhân hóa
+  users: Người dùng
+  plans: Gói dịch vụ
+  new: Mới
+  embedding: Nhúng
+  background_jobs: Tác vụ nền
+  need_help_ask_a_question_: 'Cần trợ giúp? Đặt câu hỏi:'
+  exit: Thoát
+  leave: Rời khỏi
+  impersonated_as: Đang mạo danh
+  ask_ai: Hỏi AI
+  ai_assistant: Trợ lý AI
+  discord_community: Cộng đồng Discord
+  integrations: Tích hợp
+  teams: Nhóm
+  tenants: Tổ chức thuê bao
+  send_signature_requests_via_sms: Gửi yêu cầu ký qua SMS
+  twilio_settings: Cài đặt Twilio
+  webhook_settings: Cài đặt Webhook
+  sending_sms: Đang gửi SMS
+  from: Từ
+  account_sid: Account SID
+  send_sms_via_webhook: Gửi SMS qua webhook
+  webhook_integration_allows_to_send_sms_using_any_provider: Tích hợp webhook cho phép gửi SMS qua bất kỳ nhà cung cấp nào
+  test: Kiểm tra
+  single_sign_on_with_saml_2_0: Đăng nhập một lần với SAML 2.0
+  force_sso_disable_login_with_email_and_password: Bắt buộc SSO (tắt đăng nhập bằng email và mật khẩu)
+  for_aws_s3_compatible_apis_like_minio: Dành cho các API tương thích AWS S3 như Minio.
+  store_all_files_on_disk: Lưu tất cả tệp trên ổ đĩa
+  no_configs_are_needed_but_make_sure_your_disk_is_persistent: Không cần cấu hình nhưng hãy đảm bảo ổ đĩa của bạn lưu trữ lâu dài
+  not_suitable_for_heroku_and_other_paas: Không phù hợp với Heroku và các PaaS khác
+  bulk_send_from_excel_xlsx_or_csv: Gửi hàng loạt từ Excel XLSX hoặc CSV
+  add_new: Thêm mới
+  add_recipients: Thêm người nhận
+  add_new_recipients: Thêm người nhận mới
+  add_recipients_html: <span>Thêm <span class="hidden md:inline">người nhận</span></span>
+  type_emails_here: Nhập email tại đây
+  or_embed_on_your_website: Hoặc nhúng vào trang web của bạn
+  phone: Điện thoại
+  send_emails: Gửi email
+  edit_message: Sửa tin nhắn
+  smtp_not_configured: Chưa cấu hình SMTP
+  configure_smtp_settings_in_order_to_send_emails_: 'Cấu hình cài đặt SMTP để gửi email:'
+  go_to_smtp_settings: Đến cài đặt SMTP
+  save_as_default_template_message: Lưu làm thông báo mẫu mặc định
+  re_send_sms: Gửi lại SMS
+  send_sms: Gửi SMS
+  preserve_order: Giữ nguyên thứ tự
+  when_checked_notifications_will_be_sent_to_the_second_party_once_the_form_is_completed_by_the_previous_party_uncheck_this_option_to_send_notifications_to_all_parties_simultaneously_right_away: Khi được chọn, thông báo sẽ được gửi đến bên thứ hai sau khi biểu mẫu được bên trước hoàn tất. Bỏ chọn tùy chọn này để gửi thông báo đến tất cả các bên cùng lúc ngay lập tức.
+  upgrade_to_send_unlimited_signature_requests: Nâng cấp để gửi yêu cầu ký không giới hạn
+  add_without_sending: Thêm mà không gửi
+  upgade_now: Nâng cấp ngay
+  send_signature_request_emails_without_limits_with_docuseal_pro: Gửi email yêu cầu ký không giới hạn với e-Office Pro
+  count_emails_used: 'Đã dùng %{count} email'
+  has_been_connected: đã được kết nối
+  sms_not_configured: Chưa cấu hình SMS
+  configure_sms_settings_in_order_to_send_text_messages_: 'Cấu hình cài đặt SMS để gửi tin nhắn văn bản:'
+  go_to_sms_settings: Đến cài đặt SMS
+  back_to_active: Quay lại đang hoạt động
+  submissions: Hồ sơ gửi
+  templates: Mẫu
+  document_templates_html: Mẫu <span class="hidden md:inline">tài liệu</span>
+  archived: Đã lưu trữ
+  search: Tìm kiếm
+  submissions_not_found: Không tìm thấy hồ sơ
+  create: Tạo
+  view_archived: Xem mục đã lưu trữ
+  all: Tất cả
+  pending: Đang chờ
+  completed: Đã hoàn tất
+  primarily_opened_with_microsoft_excel_other_options_include_google_sheets_libreoffice_calc_and_openoffice_calc: Chủ yếu mở bằng Microsoft Excel. Các lựa chọn khác gồm Google Sheets, LibreOffice Calc và OpenOffice Calc.
+  can_be_opened_with_microsoft_excel_google_sheets_or_any_text_editor_like_notepad: Có thể mở bằng Microsoft Excel, Google Sheets hoặc bất kỳ trình soạn thảo văn bản nào như Notepad.
+  draw_signature: Vẽ chữ ký
+  clear: Xóa
+  signature_uploaded: Đã tải lên chữ ký
+  submission_deletion_is_irreversible_and_will_permanently_remove_all_associated_signed_documents_with_it_are_you_sure_: 'Việc xóa hồ sơ là không thể hoàn tác và sẽ xóa vĩnh viễn tất cả tài liệu đã ký liên quan. Bạn có chắc không?'
+  return_back_to_your_desktop_device_to_complete_the_form_or_continue_on_mobile_html: 'Quay lại thiết bị máy tính để hoàn tất biểu mẫu hoặc <a class="link" href="%{link}">tiếp tục trên di động</a>'
+  template_deletion_is_irreversible_and_will_permanently_remove_all_associated_signed_documents_with_it_are_you_sure_: Việc xóa mẫu là không thể hoàn tác và sẽ xóa vĩnh viễn tất cả tài liệu đã ký liên quan. Bạn có chắc không?
+  rename_folder: Đổi tên thư mục
+  folder_name: Tên thư mục
+  rename: Đổi tên
+  home: Trang chủ
+  templates_not_found: Không tìm thấy mẫu
+  upload_new_document: Tải lên tài liệu mới
+  uploading: Đang tải lên
+  expired: Đã hết hạn
+  sign_now: Ký ngay
+  archive: Lưu trữ
+  archiving: Đang lưu trữ
+  restore: Khôi phục
+  restoring: Đang khôi phục
+  clone: Nhân bản
+  edit: Sửa
+  move: Di chuyển
+  moving: đang di chuyển
+  preview: Xem trước
+  upload: Tải lên
+  clone_template: Nhân bản mẫu
+  new_document_template: Mẫu tài liệu mới
+  document_name: Tên tài liệu
+  change_folder: Đổi thư mục
+  shared: đã chia sẻ
+  export: Xuất
+  there_are_no_submissions: Chưa có hồ sơ nào
+  send_an_invitation_to_fill_and_complete_the_form: Gửi lời mời điền và hoàn tất biểu mẫu
+  send_to_recipients: Gửi đến người nhận
+  sign_it_yourself: Tự ký
+  api_and_embedding: API và Nhúng
+  template_id: ID mẫu
+  embedding_url: URL nhúng
+  share_template_with_test_mode: Chia sẻ mẫu ở chế độ thử nghiệm
+  share_template_with_all_tenants: Chia sẻ mẫu với tất cả tổ chức thuê bao
+  use_following_placeholders_text_: 'Sử dụng văn bản giữ chỗ sau:'
+  users_count_total_users_count_pro_users_limit_was_reached_to_invite_additional_users_please_purchase_more_pro_user_seats_via_the_manage_plan_button: '%{users_count}/%{total_users_count} đã đạt giới hạn người dùng Pro. Để mời thêm người dùng, vui lòng mua thêm chỗ người dùng Pro qua nút "Quản lý gói".'
+  move_into_folder: Di chuyển vào thư mục
+  new_folder_name: Tên thư mục mới
+  new_subfolder_name: Tên thư mục con mới
+  change_parent_folder: Đổi thư mục cha
+  folder: Thư mục
+  create_a_new_folder: Tạo thư mục mới
+  exit_preview: Thoát xem trước
+  general: Chung
+  recipients: Người nhận
+  form_preferences: Tùy chọn biểu mẫu
+  redirect_on_completion_url: URL chuyển hướng khi hoàn tất
+  completion_message: Thông báo hoàn tất
+  email_subject: Tiêu đề email
+  email_body: Nội dung email
+  attach_audit_log_pdf_to_the_email: Đính kèm PDF nhật ký kiểm toán vào email
+  send_emails_automatically_on_completion: Tự động gửi email khi hoàn tất
+  attach_documents_to_the_email: Đính kèm tài liệu vào email
+  not_specified: Không xác định
+  submission_requester: Người yêu cầu hồ sơ
+  specified_email: Email được chỉ định
+  invite_by_name: 'Mời bởi %{name}'
+  same_as_name: 'Giống như %{name}'
+  default_email: Email mặc định
+  processing: Đang xử lý
+  upload_initials: Tải lên chữ ký tắt
+  draw: Vẽ
+  upload_signature: Tải lên chữ ký
+  integration: Tích hợp
+  admin: Quản trị viên
+  tenant_admin: Quản trị viên tổ chức
+  editor: Người chỉnh sửa
+  viewer: Người xem
+  member: Thành viên
+  agent: Đại lý
+  superadmin: Quản trị tối cao
+  edit_user: Sửa người dùng
+  new_user: Người dùng mới
+  unarchive: Bỏ lưu trữ
+  last_session: Phiên gần nhất
+  unlock_more_user_roles_with_docuseal_pro: Mở khóa thêm vai trò người dùng với e-Office Pro.
+  view_active: Xem mục đang hoạt động
+  team_account: Tài khoản nhóm
+  team_accounts: Tài khoản nhóm
+  tenant_account: Tài khoản tổ chức
+  tenant_accounts: Tài khoản tổ chức
+  impersonate: Mạo danh
+  loading: Đang tải
+  documents: Tài liệu
+  accounts: Tài khoản
+  edit_account: Sửa tài khoản
+  new_team: Nhóm mới
+  new_tenant: Tổ chức mới
+  remove_team: Xóa nhóm
+  remove_tenant: Xóa tổ chức
+  replace: Thay thế
+  allow_tenant_admins_to_invite_new_users: Cho phép quản trị viên tổ chức mời người dùng mới
+  manage_multiple_teams: Quản lý nhiều nhóm
+  api_key: API Key
+  logo: Logo
+  back: Quay lại
+  add_secret: Thêm secret
+  edit_secret: Sửa secret
+  submission_example_payload: Payload hồ sơ mẫu
+  there_are_no_signatures: Chưa có chữ ký nào
+  signed_with_trusted_certificate: Đã ký bằng chứng chỉ tin cậy
+  signed_with_external_certificate: Đã ký bằng chứng chỉ bên ngoài
+  setup_2fa_to_continue: Thiết lập xác thực 2 lớp để tiếp tục.
+  create_a_new_account: Tạo tài khoản mới.
+  you_are_already_signed_in: Bạn đã đăng nhập.
+  please_sign_in: Vui lòng đăng nhập.
+  not_found: Không tìm thấy
+  new_recipients_have_been_added: Đã thêm người nhận mới.
+  submission_has_been_removed: Hồ sơ đã được xóa.
+  submission_has_been_archived: Hồ sơ đã được lưu trữ.
+  form_has_been_completed_already: Biểu mẫu đã được hoàn tất.
+  form_has_been_archived: Biểu mẫu đã được lưu trữ.
+  form_has_been_expired: Biểu mẫu đã hết hạn.
+  form_has_been_declined: Biểu mẫu đã bị từ chối.
+  file_is_missing: Thiếu tệp
+  folder_name_has_been_updated: Tên thư mục đã được cập nhật.
+  unable_to_rename_folder: Không thể đổi tên thư mục.
+  template_has_been_removed: Mẫu đã được xóa.
+  template_has_been_archived: Mẫu đã được lưu trữ.
+  template_has_been_cloned: Mẫu đã được nhân bản.
+  document_template_has_been_moved: Mẫu tài liệu đã được di chuyển.
+  unable_to_move_template_into_folder: Không thể di chuyển mẫu vào thư mục.
+  template_has_been_unarchived: Mẫu đã được bỏ lưu trữ.
+  submission_has_been_unarchived: Hồ sơ đã được bỏ lưu trữ.
+  unable_to_update_file: Không thể tải lên tệp.
+  user_has_been_invited: Người dùng đã được mời.
+  unable_to_update_user: Không thể cập nhật người dùng.
+  user_has_been_updated: Người dùng đã được cập nhật.
+  unable_to_remove_user: Không thể xóa người dùng.
+  user_has_been_removed: Người dùng đã được xóa.
+  invalid_pdf: PDF không hợp lệ
+  webhook_secret_has_been_saved: Webhook Secret đã được lưu.
+  webhook_url_has_been_saved: Webhook URL đã được lưu.
+  webhook_request_has_been_sent: Yêu cầu webhook đã được gửi.
+  webhook_url_has_been_updated: Webhook URL đã được cập nhật.
+  webhook_url_has_been_deleted: Webhook URL đã được xóa.
+  unable_to_resend_webhook_request: Không thể gửi lại yêu cầu webhook.
+  new_webhook: Webhook mới
+  delete_webhook: Xóa webhook
+  count_submissions_have_been_created: 'Đã tạo %{count} hồ sơ.'
+  sms_length_cant_be_longer_than_120_bytes: Độ dài SMS không được vượt quá 120 byte
+  connected_successfully: Kết nối thành công.
+  user_nameid_not_found: 'Không tìm thấy người dùng %{nameid}.'
+  sso_settings_have_been_updated: Cài đặt SSO đã được cập nhật.
+  sms_has_been_sent: SMS đã được gửi.
+  account_has_been_created: Tài khoản đã được tạo.
+  account_has_been_updated: Tài khoản đã được cập nhật.
+  account_has_been_removed: Tài khoản đã được xóa.
+  logo_has_been_uploaded: Logo đã được tải lên.
+  invalid_file_type: Loại tệp không hợp lệ
+  upload_file: Tải lên tệp
+  upgrade_your_plan_to_invite_more_users_contact_email: 'Nâng cấp gói của bạn để mời thêm người dùng (liên hệ %{email}).'
+  contact_your_admin_email_to_invite_more_users: 'Liên hệ quản trị viên %{email} của bạn để mời thêm người dùng.'
+  contact_your_administrator_to_add_new_users: Liên hệ quản trị viên của bạn để thêm người dùng mới
+  one_hour: 1 giờ
+  two_hours: 2 giờ
+  four_hours: 4 giờ
+  eight_hours: 8 giờ
+  twelve_hours: 12 giờ
+  twenty_four_hours: 24 giờ
+  two_days: 2 ngày
+  four_days: 4 ngày
+  eight_days: 8 ngày
+  fifteen_days: 15 ngày
+  free: Miễn phí
+  unlimited_documents_storage: Lưu trữ tài liệu không giới hạn
+  users_management: Quản lý người dùng
+  ten_filed_types: 10 loại trường
+  multiple_signers: Nhiều người ký
+  automatic_esignature: Chữ ký điện tử tự động
+  ten_signature_request_emails_per_month: 10 email yêu cầu ký mỗi tháng
+  unlimited_sign_yourself: Tự ký không giới hạn
+  free_developer_testing_sandbox: Môi trường thử nghiệm dành cho nhà phát triển miễn phí
+  continue_with_free_basic: Tiếp tục với gói Cơ bản miễn phí
+  unlimited_signature_request_emails: Email yêu cầu ký không giới hạn
+  your_company_logo: Logo công ty của bạn
+  connect_own_email_address: Kết nối địa chỉ email riêng
+  personalize_email_content: Cá nhân hóa nội dung email
+  automated_reminders: Nhắc nhở tự động
+  bulk_send_from_spreadsheet: Gửi hàng loạt từ bảng tính
+  identify_verification_via_sms: Xác minh danh tính qua SMS
+  start_with_pro: Bắt đầu với Pro
+  user_month: người dùng / tháng
+  developer_sandbox: Môi trường nhà phát triển.
+  upgrade_to_start_using_in_production_html: '<a href="%{url}" target="_blank" class="link font-semibold">Nâng cấp</a> để bắt đầu sử dụng trong môi trường thực tế.'
+  download_combined_pdf: Tải PDF gộp
+  audit_log: Nhật ký kiểm toán
+  signers: Người ký
+  not_invited_yet: Chưa được mời
+  not_completed_yet: Chưa hoàn tất
+  declined_on_time: 'Từ chối vào %{time}'
+  expire_on_time: 'Hết hạn vào %{time}'
+  sign_in_person: Ký trực tiếp
+  create_a_new_template_document_form_or_submit_the_existing_one_html: <a href="%{new_template_link}" data-turbo-frame="modal" class="inline underline font-medium">Tạo mẫu mới</a> biểu mẫu tài liệu hoặc <a href="%{start_form_link}" target="_blank" class="inline underline font-medium">gửi biểu mẫu có sẵn</a>
+  send_email_copy_with_completed_documents_to_a_specified_bcc_address: Gửi bản sao email kèm tài liệu hoàn tất đến địa chỉ BCC được chỉ định.
+  re_send_email: Gửi lại Email
+  send_email: Gửi Email
+  copy_share_link: Sao chép liên kết chia sẻ
+  copied_to_clipboard: Đã sao chép vào bộ nhớ tạm
+  link: Liên kết
+  via_email: qua Email
+  via_phone: qua Điện thoại
+  detailed: Chi tiết
+  upload_list: Tải lên danh sách
+  creating: Đang tạo
+  open_source_documents_software: phần mềm tài liệu mã nguồn mở
+  copy_link: Sao chép liên kết
+  opened: Đã mở
+  sent: Đã gửi
+  awaiting: Đang chờ
+  document_id: ID tài liệu
+  envelope_id: ID phong bì
+  event_log: Nhật ký sự kiện
+  verify: Xác minh
+  testing_log_not_for_production_use: Nhật ký thử nghiệm - Không dùng cho môi trường thực tế
+  original_sha256: SHA256 gốc
+  result_sha256: SHA256 kết quả
+  generated_at: Được tạo lúc
+  email_verification: Xác minh email
+  phone_verification: Xác minh điện thoại
+  session_id: ID phiên
+  option: Tùy chọn
+  text_field: Trường văn bản
+  signature_field: Trường chữ ký
+  initials_field: Trường chữ ký tắt
+  date_field: Trường ngày
+  number_field: Trường số
+  image_field: Trường hình ảnh
+  file_field: Trường tệp
+  select_field: Trường lựa chọn
+  checkbox_field: Trường ô đánh dấu
+  multiple_field: Trường chọn nhiều
+  radio_field: Trường nhóm nút chọn
+  cells_field: Trường ô
+  stamp_field: Trường con dấu
+  payment_field: Trường thanh toán
+  phone_field: Trường điện thoại
+  verification_field: Xác minh danh tính
+  identity_verification: Xác minh danh tính
+  paid_price: 'Đã thanh toán %{price}'
+  verified: Đã xác minh
+  unverified: Chưa xác minh
+  document: Tài liệu
+  completed_at: Hoàn tất lúc
+  edit_recipient: Sửa người nhận
+  update_recipient: Cập nhật người nhận
+  use_international_format_1xxx_: 'Sử dụng định dạng quốc tế: +84xxx...'
+  submitter_cannot_be_updated: Không thể cập nhật người ký.
+  at_least_one_field_must_be_filled: Phải điền ít nhất một trường.
+  archived_users: Người dùng đã lưu trữ
+  embedding_users: Người dùng nhúng
+  view_embedding_users: Xem người dùng nhúng
+  key: Khóa
+  value: Giá trị
+  webhook_secret: Webhook Secret
+  author: Tác giả
+  to: Đến
+  created_at: Được tạo lúc
+  apply: Áp dụng
+  applying: Đang áp dụng
+  today: Hôm nay
+  yesterday: Hôm qua
+  this_week: Tuần này
+  last_week: Tuần trước
+  this_month: Tháng này
+  last_month: Tháng trước
+  this_year: Năm nay
+  policy_links: Liên kết chính sách
+  markdown_content_e_g: Nội dung Markdown, ví dụ
+  privacy_policy: Chính sách bảo mật
+  the_code_has_been_sent_to_your_email: Mã đã được gửi đến email của bạn.
+  enter_the_verification_code_from_your_email: Nhập mã xác minh từ email của bạn.
+  too_many_attempts: Quá nhiều lần thử.
+  verification_code: Mã xác minh
+  resend_code: Gửi lại mã
+  verify_new_sign_in: Xác minh đăng nhập mới
+  use_otp_code_to_sign_in_or_click_the_link_below_html: 'Dùng mã <b>%{code}</b> để đăng nhập hoặc nhấn vào liên kết bên dưới:'
+  complete_sign_in: Hoàn tất đăng nhập
+  please_reply_to_this_email_if_you_dont_recognize_this_sign_in_attempt: Vui lòng trả lời email này nếu bạn không nhận ra lần đăng nhập này.
+  docuseal_support: Hỗ trợ e-Office
+  use_the_edit_form_to_move_it_to_another_team: Dùng biểu mẫu chỉnh sửa để chuyển sang nhóm khác.
+  too_many_sms_attempts_try_again_in_a_few_seconds: Quá nhiều lần thử SMS. Vui lòng thử lại sau vài giây.
+  number_phone_number_is_invalid: "Số điện thoại +%{number} không hợp lệ"
+  make_com_integration: Tích hợp Make.com
+  zapier_integration: Tích hợp Zapier
+  seamlessly_automate_your_document_signing_process_with_make_com: Tự động hóa liền mạch quy trình ký tài liệu của bạn với Make.com.
+  find_suitable_zapier_templates_to_automate_your_workflow: Tìm các mẫu Zapier phù hợp để tự động hóa quy trình của bạn.
+  get_started: Bắt đầu
+  click_here_to_learn_more_about_user_roles_and_permissions_html: '<a href="https://www.docuseal.com/resources/manage-users-and-roles" class="link" rel="noopener noreferrer nofollow" target="_blank">Nhấn vào đây</a> để tìm hiểu thêm về vai trò và quyền của người dùng.'
+  count_10_signature_request_emails_sent_this_month_upgrade_to_pro_to_send_unlimited_signature_request_email: '%{count} / 10 email yêu cầu ký đã gửi trong tháng này. Nâng cấp lên Pro để gửi email yêu cầu ký không giới hạn.'
+  test_mode_emails_limit_will_be_reset_within_24_hours: Giới hạn email ở chế độ thử nghiệm sẽ được đặt lại trong vòng 24 giờ.
+  on_a_scale_of_1_to_10_how_satisfied_are_you_with_the_docuseal_product_: Trên thang điểm từ 1 đến 10, bạn hài lòng với sản phẩm e-Office như thế nào?
+  tell_us_more_about_your_experience: Hãy cho chúng tôi biết thêm về trải nghiệm của bạn
+  extremely_dissatisfied: Cực kỳ không hài lòng
+  extremely_satisfied: Cực kỳ hài lòng
+  your_pro_plan_payment_is_overdue: Khoản thanh toán gói Pro của bạn đã quá hạn.
+  click_here_to_update_your_payment_details_and_clear_the_invoice_to_ensure_uninterrupted_service_html: <a href="%{url}" class="link">Nhấn vào đây</a> để cập nhật thông tin thanh toán và thanh toán hóa đơn nhằm đảm bảo dịch vụ không bị gián đoạn.
+  overdue_payment: Thanh toán quá hạn
+  your_pro_plan_has_been_suspended_due_to_unpaid_invoices_you_can_update_your_payment_details_to_settle_the_invoice_and_continue_using_docuseal_or_cancel_your_subscription: Gói Pro của bạn đã bị tạm ngưng do hóa đơn chưa thanh toán. Bạn có thể cập nhật thông tin thanh toán để thanh toán hóa đơn và tiếp tục sử dụng e-Office hoặc hủy đăng ký.
+  manage_subscription: Quản lý đăng ký
+  submission_created_by_email_html: '<b>Hồ sơ được tạo</b> bởi %{email}'
+  submission_created_by_email_via_source_html: '<b>Hồ sơ được tạo</b> bởi %{email} qua %{source}'
+  submission_created_via_source_html: '<b>Hồ sơ được tạo</b> qua %{source}'
+  pro_user_seats_used: Số chỗ người dùng Pro đã dùng
+  manage_plan: Quản lý gói
+  this_submission_has_multiple_signers_which_prevents_the_use_of_a_sharing_link_html: Hồ sơ này có nhiều người ký, khiến không thể dùng liên kết chia sẻ vì không rõ người ký nào chịu trách nhiệm cho các trường cụ thể. Để khắc phục, hãy làm theo <a href="https://www.docuseal.com/resources/pre-filling-recipients" class="link font-bold" rel="noopener noreferrer nofollow" target="_blank">hướng dẫn</a> này để xác định thông tin người ký mặc định.
+  welcome_to_docuseal: Chào mừng đến với e-Office
+  start_a_quick_tour_to_learn_how_to_create_an_send_your_first_document: Bắt đầu hướng dẫn nhanh để tìm hiểu cách tạo và gửi tài liệu đầu tiên của bạn
+  start_tour: Bắt đầu hướng dẫn
+  name_a_z: Tên A-Z
+  recently_used: Dùng gần đây
+  newest_first: Mới nhất trước
+  none: Không có
+  default_expiration: Thời hạn mặc định
+  specified_date: Ngày được chỉ định
+  one_day: 1 ngày
+  two_days: 2 ngày
+  three_days: 3 ngày
+  four_days: 4 ngày
+  five_days: 5 ngày
+  six_days: 6 ngày
+  seven_days: 7 ngày
+  eight_days: 8 ngày
+  nine_days: 9 ngày
+  ten_days: 10 ngày
+  two_weeks: 2 tuần
+  three_weeks: 3 tuần
+  four_weeks: 4 tuần
+  one_month: 1 tháng
+  two_months: 2 tháng
+  three_months: 3 tháng
+  eu_data_residency: Lưu trú dữ liệu tại EU
+  please_enter_your_email_address_associated_with_the_completed_submission: Vui lòng nhập địa chỉ email gắn với hồ sơ đã hoàn tất.
+  esignature_disclosure: Công bố về chữ ký điện tử
+  share_link: Liên kết chia sẻ
+  enable_shared_link: Bật liên kết chia sẻ
+  share_link_is_currently_disabled: Liên kết chia sẻ hiện đang bị tắt
+  select_data_residency: Chọn nơi lưu trú dữ liệu
+  account_name_has_invited_you_to_fill_and_sign_documents_online_effortlessly_with_a_secure_fast_and_user_friendly_digital_document_signing_solution: '%{account_name} đã mời bạn điền và ký tài liệu trực tuyến một cách dễ dàng với giải pháp ký tài liệu số an toàn, nhanh chóng và thân thiện với người dùng.'
+  review_or_download_completed_documents_fill_and_sign_documents_online_effortlessly_with_a_secure_fast_and_user_friendly_digital_document_signing_solution: Xem lại hoặc tải các tài liệu đã hoàn tất. Điền và ký tài liệu trực tuyến một cách dễ dàng với giải pháp ký tài liệu số an toàn, nhanh chóng và thân thiện với người dùng.
+  link_form_fields: Liên kết các trường biểu mẫu
+  at_least_one_field_must_be_displayed_in_the_form: Phải hiển thị ít nhất một trường trong biểu mẫu.
+  this_template_has_multiple_parties_which_prevents_the_use_of_a_sharing_link: Mẫu này có nhiều bên, khiến không thể dùng liên kết chia sẻ vì không rõ bên nào chịu trách nhiệm cho các trường cụ thể. Để khắc phục, hãy xác định thông tin bên mặc định.
+  events_log: Nhật ký sự kiện
+  succeeded: Thành công
+  failed: Thất bại
+  there_are_no_events: Chưa có sự kiện nào
+  resend: Gửi lại
+  next_attempt_in_time_in_words: Lần thử tiếp theo sau %{time_in_words}
+  request_email_otp_verification_with_shared_link: Yêu cầu xác minh OTP qua email với liên kết chia sẻ
+  sms_rate_limit_exceeded: Đã vượt quá giới hạn tần suất SMS
+  invalid_phone_number: Số điện thoại không hợp lệ
+  please_contact_the_requester_to_specify_your_phone_number_for_two_factor_authentication: Vui lòng liên hệ người yêu cầu để cung cấp số điện thoại của bạn cho xác thực hai lớp.
+  we_sent_a_one_time_verification_code_to_your_email_address_please_enter_the_code_below_to_continue: Chúng tôi đã gửi mã xác minh một lần đến địa chỉ email của bạn. Vui lòng nhập mã bên dưới để tiếp tục.
+  re_send_code: Gửi lại mã
+  your_verification_code_to_access_the_name: 'Mã xác minh của bạn để truy cập "%{name}":'
+  please_reply_to_this_email_if_you_didnt_request_this: Vui lòng trả lời email này nếu bạn không yêu cầu điều này.
+  advanced_settings: Cài đặt nâng cao
+  text: Văn bản
+  code: Mã
+  custom_html_emails: Email HTML tùy chỉnh
+  connect_your_email_to_send_html_emails: Kết nối email của bạn để gửi email HTML
+  connect_your_email_or_outlook_account_or_add_smtp_settings_to_send_custom_html_emails: Kết nối tài khoản Gmail hoặc Outlook của bạn hoặc thêm cài đặt SMTP để gửi email HTML tùy chỉnh.
+  connect_gmail_or_outlook: Kết nối Gmail hoặc Outlook
+  connect_your_email_to_bulk_send: Kết nối email của bạn để gửi hàng loạt
+  connect_your_email_or_outlook_account_or_add_smtp_settings_to_bulk_send: Kết nối tài khoản Gmail hoặc Outlook của bạn hoặc thêm cài đặt SMTP để gửi hàng loạt.
+  are_you_sure_you_want_to_add_recipients_without_sending_to_send_emails_it_requires_to_connect_gmail_or_outlook: Bạn có chắc muốn thêm người nhận mà không gửi? Để gửi email cần kết nối Gmail hoặc Outlook.
+  template_name_has_been_completed_by_submitters_html: '"<strong>{template.name}</strong>" đã được hoàn tất bởi <strong>{submission.submitters}</strong>'
+  please_check_the_copy_of_your_template_name_in_the_email_attachments_html: 'Vui lòng kiểm tra bản sao "<strong>{template.name}</strong>" của bạn trong tệp đính kèm email.'
+  you_have_been_invited_to_sign_the_template_name_html: 'Bạn đã được mời ký "<strong>{template.name}</strong>".'
+  reveal_api_key: Hiện API Key
+  enter_your_password_to_reveal_the_api_key: Nhập mật khẩu của bạn để hiện API key
+  wrong_password: Sai mật khẩu.
+  current_password: Mật khẩu hiện tại
+  dont_remember_your_current_password_click_here_to_reset_it_html: 'Không nhớ mật khẩu hiện tại? <label class="link" for="resend_password_button">Nhấn vào đây</label> để đặt lại.'
+  an_email_with_password_reset_instructions_has_been_sent: Một email kèm hướng dẫn đặt lại mật khẩu đã được gửi.
+  api_key_access_code: Mã truy cập API key
+  use_otp_code_to_access_the_api_key_html: Dùng mã <b>%{code}</b> để truy cập API key.
+  please_reply_to_this_email_if_you_dont_recognize_this_request: Vui lòng trả lời email này nếu bạn không nhận ra yêu cầu này.
+  your_user_account_has_been_archived_contact_your_administrator_to_restore_access_to_your_account: Tài khoản người dùng của bạn đã bị lưu trữ. Liên hệ quản trị viên của bạn để khôi phục quyền truy cập vào tài khoản.
+  your_email_could_not_be_reached_this_may_happen_if_there_was_a_typo_in_your_address_or_if_your_mailbox_is_not_available_please_contact_support_email_to_log_in: Không thể gửi đến email của bạn. Điều này có thể xảy ra nếu có lỗi đánh máy trong địa chỉ hoặc hộp thư của bạn không khả dụng. Vui lòng liên hệ support@docuseal.com để đăng nhập.
+  submission_sources:
+    api: API
+    bulk: Gửi hàng loạt
+    embed: Nhúng
+    invite: Mời
+    link: Liên kết
+  submission_event_names:
+    send_email_to_html: '<b>Đã gửi email</b> đến %{submitter_name}'
+    bounce_email_html: '<b>Email bị trả lại</b> %{submitter_name}'
+    complaint_email_html: '<b>Khiếu nại spam</b> %{submitter_name}'
+    send_reminder_email_to_html: '<b>Đã gửi email nhắc nhở</b> đến %{submitter_name}'
+    send_sms_to_html: '<b>Đã gửi SMS</b> đến %{submitter_name}'
+    send_2fa_sms_to_html: '<b>Đã gửi SMS xác minh</b> đến %{submitter_name}'
+    open_email_by_html: '<b>Email đã được mở</b> bởi %{submitter_name}'
+    click_email_by_html: '<b>Đã nhấn liên kết trong email</b> bởi %{submitter_name}'
+    click_sms_by_html: '<b>Đã nhấn liên kết trong SMS</b> bởi %{submitter_name}'
+    phone_verified_by_html: '<b>Điện thoại đã được xác minh</b> bởi %{submitter_name}'
+    email_verified_by_html: '<b>Email đã được xác minh</b> bởi %{submitter_name}'
+    start_form_by_html: '<b>Hồ sơ đã được bắt đầu</b> bởi %{submitter_name}'
+    view_form_by_html: '<b>Biểu mẫu đã được xem</b> bởi %{submitter_name}'
+    invite_party_by_html: '<b>Đã mời</b> %{invited_submitter_name} bởi %{submitter_name}'
+    complete_form_by_html: '<b>Hồ sơ đã hoàn tất</b> bởi %{submitter_name}'
+    start_verification_by_html: '<b>Xác minh danh tính đã được bắt đầu</b> bởi %{submitter_name}'
+    complete_verification_by_html: '<b>Xác minh danh tính đã hoàn tất</b> bởi %{submitter_name} với %{provider}'
+    api_complete_form_by_html: '<b>Hồ sơ đã hoàn tất qua API</b> bởi %{submitter_name}'
+  import_list:
+    select_worksheet: Chọn trang tính
+    open: Mở
+    remove: Xóa
+    recipient_field: Trường người nhận
+    spreadsheet_column: Cột bảng tính
+    select_field: Chọn trường
+    select_column: Chọn cột
+    new_field_mapping: Ánh xạ trường mới
+    total_entries: Tổng số mục
+    upload_csv_or_xlsx_spreadsheet: Tải lên bảng tính CSV hoặc XLSX
+    click_to_upload: Nhấn để tải lên
+    or_drag_and_drop_files: hoặc kéo và thả tệp.
+    or: Hoặc
+    download: tải xuống
+    a_sample_spreadsheet_to_fill_and_import: một bảng tính mẫu để điền và nhập
+  app_tour:
+    start: Bắt đầu
+    previous: Trước
+    next: Tiếp
+    template_and_submissions: 'Mẫu và Hồ sơ'
+    template_and_submissions_description: "Bạn có thể chọn chế độ xem phù hợp nhất với quy trình làm việc của mình. Chọn chế độ xem 'Mẫu' để tạo các mẫu tài liệu tái sử dụng, hoặc chế độ xem 'Hồ sơ' để ký từng tài liệu hoặc xem trạng thái của từng yêu cầu ký."
+    upload_a_pdf_file: 'Tải lên tệp PDF'
+    upload_a_pdf_file_description: 'Tải lên tài liệu PDF để tạo mẫu biểu mẫu ký.'
+    select_a_signer_party: 'Chọn bên ký'
+    select_a_signer_party_description: 'Danh sách thả xuống này cho phép bạn chọn vai trò bên ký hoặc thêm bên mới vào tài liệu nếu cần 2 chữ ký trở lên.'
+    available_parties: 'Các bên khả dụng'
+    available_parties_description: 'Danh sách này chứa tất cả các bên khả dụng cùng tên vai trò của họ. Sau khi chọn, bạn có thể thêm và cấu hình các trường cho bên ký.'
+    available_field_types: 'Các loại trường khả dụng'
+    available_field_types_description: 'Phần này chứa tất cả các loại trường khả dụng có thể thêm vào tài liệu để nhập dữ liệu hoặc thu thập chữ ký.'
+    text_input_field: 'Trường nhập văn bản'
+    text_input_field_description: 'Trường này cho phép người dùng nhập thông tin dạng văn bản, như tên hoặc email.'
+    signature_field: 'Trường chữ ký'
+    signature_field_description: 'Trường này được dùng để thu thập chữ ký từ người ký.'
+    added_fields: 'Các trường đã thêm'
+    added_fields_description: 'Danh sách này hiển thị tất cả các trường đã thêm vào tài liệu. Bạn có thể sắp xếp lại, sửa hoặc xóa chúng.'
+    open_field_settings: 'Mở cài đặt trường'
+    open_field_settings_description: 'Ở bên phải, cạnh tên trường, có một biểu tượng cài đặt mở phần cài đặt trường.'
+    field_settings: 'Cài đặt trường'
+    field_settings_description: 'Mỗi trường có thể được tùy chỉnh qua cài đặt để đáp ứng yêu cầu của bạn, như điều chỉnh cỡ chữ, đặt là trường bắt buộc hoặc thêm mô tả.'
+    send_document: 'Gửi tài liệu để ký'
+    send_document_description: 'Trước khi gửi tài liệu để ký, bạn có thể cấu hình người nhận, thêm địa chỉ email hoặc số điện thoại của họ và tùy chỉnh nội dung email.'
+    sign_yourself: 'Tự ký tài liệu'
+    sign_yourself_description: 'Nút này cho phép bạn thêm chữ ký của mình vào các tài liệu cần chữ ký của bạn.'
+    copy_and_share_link: 'Sao chép & chia sẻ liên kết'
+    copy_and_share_link_description: 'Sao chép liên kết này để chia sẻ tài liệu. Bất kỳ ai có liên kết đều có thể ký sau khi nhập email của họ.'
+    sign_the_document: 'Ký tài liệu'
+    sign_the_document_description: 'Nếu bạn là một trong những người ký, nút này cho phép bạn ký tài liệu.'
+    send_for_signing: 'Gửi để ký'
+    add_recipients: 'Thêm người nhận'
+    add_recipients_description: 'Thêm người nhận mới cho tài liệu cần ký bằng cách nhập địa chỉ email hoặc số điện thoại của họ.'
+    settings: 'Cài đặt'
+    settings_account_description: 'Với cài đặt tài khoản toàn diện, bạn có thể tùy chỉnh trải nghiệm ký điện tử và mời thêm người dùng.'
+    support: 'Hỗ trợ'
+    support_description: 'Bạn có thể dùng trợ lý AI tự phục vụ của chúng tôi hoặc gửi email cho chúng tôi tại support@docuseal.com nếu bạn có bất kỳ câu hỏi nào.'
+    settings_template_description: 'Dùng nút này để truy cập trang cài đặt tài khoản của bạn.'
+  doorkeeper:
+    scopes:
+      write: Cập nhật dữ liệu của bạn
+      read: Đọc dữ liệu của bạn
+  pagination:
+    submissions:
+      range_with_total: "%{from}-%{to} trong %{count} hồ sơ"
+      range_without_total: "%{from}-%{to} hồ sơ"
+    templates:
+      range_with_total: "%{from}-%{to} trong %{count} mẫu"
+      range_without_total: "%{from}-%{to} mẫu"
+    template_folders:
+      range_with_total: "%{from}-%{to} trong %{count} thư mục"
+      range_without_total: "%{from}-%{to} thư mục"
+    users:
+      range_with_total: "%{from}-%{to} trong %{count} người dùng"
+      range_without_total: "%{from}-%{to} người dùng"
+    items:
+      range_with_total: "%{from}-%{to} trong %{count} mục"
+      range_without_total: "%{from}-%{to} mục"
+    events:
+      range_with_total: "%{from}-%{to} trong %{count} sự kiện"
+      range_without_total: "%{from}-%{to} sự kiện"
+  date:
+    formats:
+      default: "%d/%m/%Y"
 
 es: &es
   enabled: Habilitado
