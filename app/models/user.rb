@@ -43,8 +43,19 @@
 #  fk_rails_...  (account_id => accounts.id)
 #
 class User < ApplicationRecord
+  # Deep role hierarchy (Pro/Enterprise HR management feature).
+  #
+  #   admin  - full access to everything, including users and settings
+  #   editor - manages files (templates, folders, submissions), but not users
+  #   member - read-only access limited to their own department's files
+  #   agent  - can only send signing requests (create submissions)
+  #   viewer - read-only access across the account
   ROLES = [
-    ADMIN_ROLE = 'admin'
+    ADMIN_ROLE = 'admin',
+    EDITOR_ROLE = 'editor',
+    MEMBER_ROLE = 'member',
+    AGENT_ROLE = 'agent',
+    VIEWER_ROLE = 'viewer'
   ].freeze
 
   EMAIL_REGEXP = /[^@;,<>\s]+@[^@;,<>\s]+/
@@ -56,6 +67,7 @@ class User < ApplicationRecord
   has_one_attached :initials
 
   belongs_to :account
+  belongs_to :department, optional: true
   has_one :access_token, dependent: :destroy
   has_many :access_tokens, dependent: :destroy
   has_many :templates, dependent: :destroy, foreign_key: :author_id, inverse_of: :author
@@ -72,6 +84,31 @@ class User < ApplicationRecord
   scope :active, -> { where(archived_at: nil) }
   scope :archived, -> { where.not(archived_at: nil) }
   scope :admins, -> { where(role: ADMIN_ROLE) }
+
+  def admin?
+    role == ADMIN_ROLE
+  end
+
+  def editor?
+    role == EDITOR_ROLE
+  end
+
+  def member?
+    role == MEMBER_ROLE
+  end
+
+  def agent?
+    role == AGENT_ROLE
+  end
+
+  def viewer?
+    role == VIEWER_ROLE
+  end
+
+  # Roles that are limited to read-only access.
+  def read_only?
+    member? || viewer?
+  end
 
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\z/ }
 

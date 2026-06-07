@@ -43,11 +43,13 @@ class Template < ApplicationRecord
 
   belongs_to :author, class_name: 'User'
   belongs_to :account
+  belongs_to :department, optional: true
   belongs_to :folder, class_name: 'TemplateFolder'
 
   has_one :search_entry, as: :record, inverse_of: :record, dependent: :destroy if SearchEntry.table_exists?
 
   before_validation :maybe_set_default_folder, on: :create
+  before_save :assign_department_from_folder
 
   attribute :preferences, :string, default: -> { {} }
   attribute :fields, :string, default: -> { [] }
@@ -86,5 +88,11 @@ class Template < ApplicationRecord
 
   def maybe_set_default_folder
     self.folder ||= account.default_template_folder
+  end
+
+  # Templates inherit their department from the folder they belong to, so that
+  # the folder is the single source of truth for department isolation.
+  def assign_department_from_folder
+    self.department_id = folder.department_id if folder
   end
 end

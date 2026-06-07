@@ -33,6 +33,7 @@
         </div>
       <% end %>
       <%= render 'role_select', f: %>
+      <%= render 'department_select', f: %>
     <% end %>
     <% if local_assigns[:extra_fields_html].present? %>
       <%= local_assigns[:extra_fields_html] %>

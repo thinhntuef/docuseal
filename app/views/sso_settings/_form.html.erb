@@ -1,0 +1,92 @@
+<% config = encrypted_config.value || {} %>
+<div class="alert mb-6">
+  <%= svg_icon('info_circle', class: 'w-6 h-6') %>
+  <div>
+    <p class="text-gray-700">
+      <%= t('saml_sso_intro') %>
+    </p>
+  </div>
+</div>
+<%= form_with url: settings_sso_index_path, method: :post, scope: :saml_configs, html: { class: 'space-y-4', autocomplete: 'off' } do |f| %>
+  <div class="form-control">
+    <label class="cursor-pointer label justify-start gap-3">
+      <%= f.check_box :enabled, { checked: config['enabled'].present?, class: 'toggle' }, 'true', '' %>
+      <span class="label-text"><%= t('enable_saml_sso') %></span>
+    </label>
+  </div>
+
+  <div class="divider"><%= t('identity_provider') %></div>
+
+  <div class="form-control">
+    <%= f.label :idp_sso_url, t('idp_sso_url'), class: 'label' %>
+    <%= f.url_field :idp_sso_url, value: config['idp_sso_url'], class: 'base-input', placeholder: 'https://idp.example.com/sso/saml' %>
+  </div>
+  <div class="form-control">
+    <%= f.label :idp_entity_id, t('idp_entity_id'), class: 'label' %>
+    <%= f.text_field :idp_entity_id, value: config['idp_entity_id'], class: 'base-input', dir: 'auto' %>
+  </div>
+  <div class="form-control">
+    <%= f.label :idp_cert, t('idp_certificate'), class: 'label' %>
+    <%= f.text_area :idp_cert, value: config['idp_cert'], rows: 6, class: 'base-textarea w-full font-mono text-xs', placeholder: "-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----" %>
+  </div>
+  <div class="form-control">
+    <%= f.label :name_identifier_format, t('name_identifier_format'), class: 'label' %>
+    <%= f.text_field :name_identifier_format, value: config['name_identifier_format'], class: 'base-input', dir: 'auto', placeholder: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress' %>
+  </div>
+
+  <div class="divider"><%= t('service_provider') %></div>
+
+  <div class="form-control">
+    <%= f.label :sp_entity_id, t('sp_entity_id'), class: 'label' %>
+    <%= f.text_field :sp_entity_id, value: config['sp_entity_id'], class: 'base-input', dir: 'auto', placeholder: Docuseal::PRODUCT_NAME %>
+  </div>
+
+  <div class="divider"><%= t('attribute_mapping') %></div>
+
+  <div class="form-control">
+    <%= f.label :email_attribute, t('email_attribute'), class: 'label' %>
+    <%= f.text_field :email_attribute, value: config['email_attribute'], class: 'base-input', dir: 'auto', placeholder: 'email' %>
+  </div>
+  <div class="flex space-x-4">
+    <div class="form-control w-full">
+      <%= f.label :first_name_attribute, t('first_name_attribute'), class: 'label' %>
+      <%= f.text_field :first_name_attribute, value: config['first_name_attribute'], class: 'base-input', dir: 'auto', placeholder: 'first_name' %>
+    </div>
+    <div class="form-control w-full">
+      <%= f.label :last_name_attribute, t('last_name_attribute'), class: 'label' %>
+      <%= f.text_field :last_name_attribute, value: config['last_name_attribute'], class: 'base-input', dir: 'auto', placeholder: 'last_name' %>
+    </div>
+  </div>
+  <div class="form-control">
+    <%= f.label :role_attribute, t('role_attribute'), class: 'label' %>
+    <%= f.text_field :role_attribute, value: config['role_attribute'], class: 'base-input', dir: 'auto', placeholder: 'role' %>
+    <label class="label">
+      <span class="label-text-alt"><%= t('role_attribute_hint') %></span>
+    </label>
+  </div>
+  <div class="form-control">
+    <%= f.label :department_attribute, t('department_attribute'), class: 'label' %>
+    <%= f.text_field :department_attribute, value: config['department_attribute'], class: 'base-input', dir: 'auto', placeholder: 'department' %>
+    <label class="label">
+      <span class="label-text-alt"><%= t('department_attribute_hint') %></span>
+    </label>
+  </div>
+
+  <div class="divider"><%= t('provisioning') %></div>
+
+  <div class="form-control">
+    <%= f.label :default_role, t('default_role'), class: 'label' %>
+    <%= f.select :default_role, User::ROLES.map { |role| [t(role), role] },
+                 { selected: config['default_role'] || User::VIEWER_ROLE }, class: 'base-select' %>
+  </div>
+  <div class="form-control">
+    <label class="cursor-pointer label justify-start gap-3">
+      <%= f.check_box :auto_provision, { checked: config['auto_provision'].present?, class: 'toggle' }, 'true', '' %>
+      <span class="label-text"><%= t('auto_provision_users') %></span>
+    </label>
+  </div>
+
+  <div class="form-control pt-2">
+    <%= f.button t('save'), class: 'base-button' %>
+  </div>
+<% end %>

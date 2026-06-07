@@ -44,9 +44,14 @@
           <%= link_to t('personalization'), settings_personalization_path, class: 'text-base hover:bg-base-300' %>
         </li>
       <% end %>
-      <% if can?(:read, User) %>
+      <% if can?(:administrate, :users) %>
         <li>
           <%= link_to t('users'), settings_users_path, class: 'text-base hover:bg-base-300' %>
+        </li>
+      <% end %>
+      <% if can?(:manage, Department.new(account: current_account)) %>
+        <li>
+          <%= link_to t('departments'), settings_departments_path, class: 'text-base hover:bg-base-300' %>
         </li>
       <% end %>
       <%= render 'shared/settings_nav_extra' %>

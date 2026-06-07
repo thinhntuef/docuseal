@@ -3,6 +3,18 @@
     <div class="form-control my-6">
       <%= f.text_field :name, required: true, placeholder: "#{t('folder_name')}...", class: 'base-input w-full', autofocus: true, dir: 'auto' %>
     </div>
+    <% departments = current_account.departments.ordered %>
+    <% if departments.exists? %>
+      <div class="form-control mb-6">
+        <%= f.label :department_id, t('department'), class: 'label' %>
+        <%= f.select :department_id,
+                     departments.map { |department| [department.name, department.id] },
+                     { include_blank: t('no_department') }, class: 'base-select' %>
+        <label class="label">
+          <span class="label-text-alt"><%= t('folder_department_hint') %></span>
+        </label>
+      </div>
+    <% end %>
     <div class="form-control">
       <%= f.button button_title(title: t('rename'), disabled_with: t('saving')), class: 'base-button' %>
     </div>

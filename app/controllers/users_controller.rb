@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action -> { authorize!(:administrate, :users) }
+
   load_and_authorize_resource :user, only: %i[index edit update destroy]
 
   before_action :build_user, only: %i[new create]
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
   def update
     return redirect_to settings_users_path, notice: I18n.t('unable_to_update_user') if Docuseal.demo?
 
-    attrs = user_params.compact_blank.merge(user_params.slice(:archived_at))
+    attrs = user_params.compact_blank.merge(user_params.slice(:archived_at, :department_id))
 
     if params.dig(:user, :account_id).present?
       account = Account.accessible_by(current_ability).find(params.dig(:user, :account_id))
@@ -84,7 +86,7 @@ class UsersController < ApplicationController
 
   def user_params
     if params.key?(:user)
-      permitted_params = %i[email first_name last_name password archived_at otp_required_for_login]
+      permitted_params = %i[email first_name last_name password archived_at otp_required_for_login department_id]
 
       permitted_params << :role if role_valid?(params.dig(:user, :role))
 

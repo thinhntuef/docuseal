@@ -1,0 +1,9 @@
+<% departments = current_account.departments.ordered %>
+<% if departments.exists? %>
+  <div class="form-control">
+    <%= f.label :department_id, t('department'), class: 'label' %>
+    <%= f.select :department_id,
+                 departments.map { |department| [department.name, department.id] },
+                 { include_blank: t('no_department') }, class: 'base-select' %>
+  </div>
+<% end %>
