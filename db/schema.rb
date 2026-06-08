@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_16_000001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "btree_gin"
   enable_extension "plpgsql"
@@ -154,6 +154,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["username"], name: "index_console1984_users_on_username"
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.string "name", null: false
+    t.string "uuid", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id", "name"], name: "index_departments_on_account_id_and_name", unique: true
+    t.index ["account_id"], name: "index_departments_on_account_id"
+    t.index ["uuid"], name: "index_departments_on_uuid", unique: true
   end
 
   create_table "document_generation_events", force: :cascade do |t|
@@ -369,8 +380,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "parent_folder_id"
+    t.bigint "department_id"
     t.index ["account_id"], name: "index_template_folders_on_account_id"
     t.index ["author_id"], name: "index_template_folders_on_author_id"
+    t.index ["department_id"], name: "index_template_folders_on_department_id"
     t.index ["parent_folder_id"], name: "index_template_folders_on_parent_folder_id"
   end
 
@@ -401,9 +414,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
     t.text "preferences", null: false
     t.boolean "shared_link", default: false, null: false
     t.text "variables_schema"
+    t.bigint "department_id"
     t.index ["account_id", "folder_id", "id"], name: "index_templates_on_account_id_and_folder_id_and_id", where: "(archived_at IS NULL)"
     t.index ["account_id", "id"], name: "index_templates_on_account_id_and_id_archived", where: "(archived_at IS NOT NULL)"
     t.index ["account_id"], name: "index_templates_on_account_id"
+    t.index ["department_id"], name: "index_templates_on_department_id"
     t.index ["author_id"], name: "index_templates_on_author_id"
     t.index ["external_id"], name: "index_templates_on_external_id"
     t.index ["folder_id"], name: "index_templates_on_folder_id"
@@ -445,7 +460,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
     t.string "otp_secret"
     t.integer "consumed_timestep"
     t.boolean "otp_required_for_login", default: false, null: false
+    t.bigint "department_id"
     t.index ["account_id"], name: "index_users_on_account_id"
+    t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
@@ -496,6 +513,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
   add_foreign_key "account_linked_accounts", "accounts", column: "linked_account_id"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "departments", "accounts"
   add_foreign_key "document_generation_events", "submitters"
   add_foreign_key "email_events", "accounts"
   add_foreign_key "email_messages", "accounts"
@@ -513,13 +531,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_060548) do
   add_foreign_key "submitters", "submissions"
   add_foreign_key "template_accesses", "templates"
   add_foreign_key "template_folders", "accounts"
+  add_foreign_key "template_folders", "departments"
   add_foreign_key "template_folders", "template_folders", column: "parent_folder_id"
   add_foreign_key "template_folders", "users", column: "author_id"
   add_foreign_key "template_sharings", "templates"
   add_foreign_key "templates", "accounts"
+  add_foreign_key "templates", "departments"
   add_foreign_key "templates", "template_folders", column: "folder_id"
   add_foreign_key "templates", "users", column: "author_id"
   add_foreign_key "user_configs", "users"
   add_foreign_key "users", "accounts"
+  add_foreign_key "users", "departments"
   add_foreign_key "webhook_urls", "accounts"
 end

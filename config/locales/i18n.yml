@@ -915,6 +915,44 @@ en: &en
     events:
       range_with_total: "%{from}-%{to} of %{count} events"
       range_without_total: "%{from}-%{to} events"
+  departments: Departments
+  department: Department
+  no_department: No department
+  new_department: New Department
+  edit_department: Edit Department
+  add_department: Add Department
+  department_has_been_added: Department has been added.
+  department_has_been_updated: Department has been updated.
+  department_has_been_removed: Department has been removed.
+  departments_description: Create independent departments (teams). Members can only access the templates and submissions that belong to their own department.
+  no_departments_yet: No departments have been created yet.
+  folder_department_hint: Templates in this folder will only be visible to members of the selected department.
+  role_admin_description: Full access, including managing users, departments and settings.
+  role_editor_description: Manages templates, folders and submissions, but not users.
+  role_member_description: Read-only access limited to their own department's files.
+  role_agent_description: Can only send signing requests.
+  role_viewer_description: Read-only access across the whole account.
+  sso_settings_have_been_saved: SSO settings have been saved.
+  saml_sso_intro: Connect your identity provider (IdP) to sign in with SAML 2.0 and synchronize users, roles and departments.
+  enable_saml_sso: Enable SAML SSO
+  identity_provider: Identity Provider
+  idp_sso_url: IdP SSO URL
+  idp_entity_id: IdP Entity ID (Issuer)
+  idp_certificate: IdP X.509 Certificate
+  name_identifier_format: Name Identifier Format
+  service_provider: Service Provider
+  sp_entity_id: SP Entity ID
+  attribute_mapping: Attribute Mapping
+  email_attribute: Email attribute
+  first_name_attribute: First name attribute
+  last_name_attribute: Last name attribute
+  role_attribute: Role attribute
+  role_attribute_hint: SAML attribute used to map the user role (admin, editor, member, agent, viewer).
+  department_attribute: Department attribute
+  department_attribute_hint: SAML attribute used to assign the user to a department by name.
+  provisioning: Provisioning
+  default_role: Default role
+  auto_provision_users: Automatically create users on first sign-in
 
 vi:
   language_en: English
@@ -6317,6 +6355,44 @@ de: &de
     events:
       range_with_total: "%{from}-%{to} von %{count} Ereignissen"
       range_without_total: "%{from}-%{to} Ereignisse"
+  departments: Phòng ban
+  department: Phòng ban
+  no_department: Không có phòng ban
+  new_department: Thêm phòng ban
+  edit_department: Chỉnh sửa phòng ban
+  add_department: Thêm phòng ban
+  department_has_been_added: Đã thêm phòng ban.
+  department_has_been_updated: Đã cập nhật phòng ban.
+  department_has_been_removed: Đã xóa phòng ban.
+  departments_description: Tạo các phòng ban (nhóm) độc lập. Thành viên chỉ có thể truy cập các mẫu và yêu cầu ký thuộc phòng ban của mình.
+  no_departments_yet: Chưa có phòng ban nào được tạo.
+  folder_department_hint: Các mẫu trong thư mục này chỉ hiển thị cho thành viên của phòng ban được chọn.
+  role_admin_description: Toàn quyền, bao gồm quản lý người dùng, phòng ban và cài đặt.
+  role_editor_description: Quản lý mẫu, thư mục và yêu cầu ký, nhưng không quản lý người dùng.
+  role_member_description: Chỉ đọc, giới hạn trong tài liệu của phòng ban mình.
+  role_agent_description: Chỉ có thể gửi yêu cầu ký.
+  role_viewer_description: Chỉ đọc trên toàn bộ tài khoản.
+  sso_settings_have_been_saved: Đã lưu cài đặt SSO.
+  saml_sso_intro: Kết nối nhà cung cấp danh tính (IdP) để đăng nhập bằng SAML 2.0 và đồng bộ người dùng, vai trò và phòng ban.
+  enable_saml_sso: Bật SAML SSO
+  identity_provider: Nhà cung cấp danh tính
+  idp_sso_url: URL SSO của IdP
+  idp_entity_id: IdP Entity ID (Issuer)
+  idp_certificate: Chứng chỉ X.509 của IdP
+  name_identifier_format: Định dạng Name Identifier
+  service_provider: Nhà cung cấp dịch vụ
+  sp_entity_id: SP Entity ID
+  attribute_mapping: Ánh xạ thuộc tính
+  email_attribute: Thuộc tính email
+  first_name_attribute: Thuộc tính tên
+  last_name_attribute: Thuộc tính họ
+  role_attribute: Thuộc tính vai trò
+  role_attribute_hint: Thuộc tính SAML dùng để ánh xạ vai trò người dùng (admin, editor, member, agent, viewer).
+  department_attribute: Thuộc tính phòng ban
+  department_attribute_hint: Thuộc tính SAML dùng để gán người dùng vào phòng ban theo tên.
+  provisioning: Cấp phát người dùng
+  default_role: Vai trò mặc định
+  auto_provision_users: Tự động tạo người dùng khi đăng nhập lần đầu
 
 pl:
   require_phone_2fa_to_open: Wymagaj uwierzytelniania telefonicznego 2FA do otwarcia

@@ -2,7 +2,11 @@
   <%= render 'shared/settings_nav' %>
   <div class="flex-grow max-w-xl mx-auto">
     <h1 class="text-4xl font-bold mb-4">SAML SSO</h1>
-    <%= render 'placeholder' %>
+    <% if can?(:manage, @encrypted_config) %>
+      <%= render 'form', encrypted_config: @encrypted_config %>
+    <% else %>
+      <%= render 'placeholder' %>
+    <% end %>
   </div>
   <div class="w-0 md:w-52"></div>
 </div>

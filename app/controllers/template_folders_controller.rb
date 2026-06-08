@@ -64,7 +64,7 @@ class TemplateFoldersController < ApplicationController
   end
 
   def template_folder_params
-    params.require(:template_folder).permit(:name)
+    params.require(:template_folder).permit(:name, :department_id)
   end
 
   def load_related_submissions

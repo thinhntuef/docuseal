@@ -30,6 +30,7 @@ class TemplateFolder < ApplicationRecord
 
   belongs_to :author, class_name: 'User'
   belongs_to :account
+  belongs_to :department, optional: true
   belongs_to :parent_folder, class_name: 'TemplateFolder', optional: true
 
   has_many :templates, dependent: :destroy, foreign_key: :folder_id, inverse_of: :folder
@@ -39,6 +40,8 @@ class TemplateFolder < ApplicationRecord
            class_name: 'Template', dependent: :destroy, foreign_key: :folder_id, inverse_of: :folder
 
   scope :active, -> { where(archived_at: nil) }
+
+  after_update_commit :cascade_department_to_templates, if: -> { saved_change_to_department_id? }
 
   def full_name
     if parent_folder_id?
@@ -50,5 +53,11 @@ class TemplateFolder < ApplicationRecord
 
   def default?
     name == DEFAULT_NAME
+  end
+
+  private
+
+  def cascade_department_to_templates
+    templates.update_all(department_id:, updated_at: Time.current)
   end
 end
